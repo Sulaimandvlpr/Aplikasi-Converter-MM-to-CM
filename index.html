@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Ukuran</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8fafc;
+            background-image: 
+                linear-gradient(#e2e8f0 1px, transparent 1px),
+                linear-gradient(90deg, #e2e8f0 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+
+        .converter-card {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 380px;
+            border: 1px solid #f1f5f9;
+        }
+
+        .header {
+            margin-bottom: 30px;
+        }
+
+        .header h2 {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: #1e293b;
+            letter-spacing: -0.5px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            font-size: 0.85rem;
+            margin-top: 5px;
+        }
+
+        .input-section {
+            background: #f1f5f9;
+            padding: 20px;
+            border-radius: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .input-section:focus-within {
+            background: #ffffff;
+            border-color: #3b82f6;
+            box-shadow: 0 10px 20px rgba(59, 130, 246, 0.1);
+        }
+
+        .input-section label {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #64748b;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .input-field {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        input {
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e293b;
+            width: 100%;
+        }
+
+        .unit-tag {
+            background: #ffffff;
+            padding: 6px 12px;
+            border-radius: 10px;
+            font-weight: 700;
+            color: #3b82f6;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .icon-divider {
+            text-align: center;
+            margin: -5px 0 10px 0;
+            color: #cbd5e1;
+            font-size: 1.2rem;
+        }
+
+        .btn-reset {
+            width: 100%;
+            background: #1e293b;
+            color: white;
+            border: none;
+            padding: 18px;
+            border-radius: 18px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            margin-top: 15px;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .btn-reset:hover {
+            background: #334155;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="converter-card">
+        <div class="header">
+            <h2>Quick Convert</h2>
+            <p>Konversi Ukuran cm dan mm dengan cepat dan tepat!.</p>
+        </div>
+
+        <div class="input-section">
+            <label>Centimeters</label>
+            <div class="input-field">
+                <input id="input-cm" type="number" placeholder="0">
+                <span class="unit-tag">CM</span>
+            </div>
+        </div>
+
+        <div class="icon-divider">⇅</div>
+
+        <div class="input-section">
+            <label>Millimeters</label>
+            <div class="input-field">
+                <input id="input-mm" type="number" placeholder="0">
+                <span class="unit-tag">MM</span>
+            </div>
+        </div>
+
+        <button id="btn-reset" class="btn-reset">Reset Angka</button>
+    </div>
+
+    <script src="logic.js"></script>
+</body>
+</html>
